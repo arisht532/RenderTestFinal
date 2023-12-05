@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <%- include('./header.ejs') %>
+            </div>
+           
+            <div class="col-md-3">
+                <%- include('./left.ejs') %>
+            </div>
+            <div class="col-md-7  border border-1 ">
+                <h1 class="text-center">Edit Form</h1>
+                <form class="mt-2" method="post" enctype="multipart/form-data">
+                 
+                        <tr>
+                
+                    <label class="fw-bold text-success">TITLE
+                    </label><br>
+                    <input type="text" name="pname" class="w-100" value="<%= data.pname %>">
+                </td>
+                <tr>
+                    <label class="fw-bold text-success">AUTHOR
+                    </label><br>
+                    <input type="text" name="pprice" class="w-100" value="<%= data.pprice %>">
+                </tr>
+                <tr >
+                    <label class="fw-bold text-success">CONTENT
+                    </label><br>
+                    <input class="w-100" type="text" name="quantity" value="<%= data.quantity %>">
+                </tr>
+
+               
+                <input type="submit"  class="bg-success text-light rounded-3 p-2 shadow-lg" name="submit" >
+      
+            </tr>
+    
+            </form>
+          
+        </div>
+    </div>
+</body>
+</html>

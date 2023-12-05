@@ -1,0 +1,27 @@
+ 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <%- include('./header.ejs') %>
+            </div></div></div>
+            <div class="container-fluid">
+                <table>
+                    <form method="post" action="/signup">
+                        <tr>
+                            <td>
+                            <label > email:</label><br>
+                           <input type="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label > password:</label><br>
+                            <input type="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="btn btn-outline-success" type="submit">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+            </div>

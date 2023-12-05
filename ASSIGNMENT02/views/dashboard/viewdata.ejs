@@ -1,0 +1,91 @@
+<style>
+    th{
+        color: green;
+    }
+    .table-container {
+        max-height: 600px; /* Adjust the height as needed */
+        overflow-y: auto;
+
+    }
+
+    @media (min-width: 576px) {
+        .table-container {
+            overflow-y: visible;
+            width: auto;
+        }
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <%- include('./header.ejs') %>
+        </div>
+       
+        <div class="col-md-3">
+            <%- include('./left.ejs') %>
+        </div>
+        <div class="col-md-9">
+      
+            <div class="container">
+                <% if(data.length>0) { %>
+                    <div class="table-container">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+            
+                           
+                            <th class="col">TITLE</th>
+                            <th class="col">AUTHOR</th>
+                            <th class="col">BLOG</th>
+                          
+                           
+                            <th class="col">Edit</th>
+                            
+                            <th class="col">delete</th>
+                          
+                
+                          </tr>
+                    <tbody>
+                        <% for(i=0;i<data.length;i++) {%>
+                            <tr>
+                                <td  class="text-success "><b><%= i %></b> </td>
+                                <td style="width: 100px; height: 80px;"><img src="<%= data[i].pfile %>" class="img-fluid"></td>
+                                <td><%= data[i].pname %></td>
+                                <td><%= data[i].pprice %></td>
+                                <td><%= data[i].quantity %></td>
+            
+                               
+                  
+         
+                    
+                    
+                      <td>
+                        <a href="/edit/<%=data[i]._id %>" class="btn btn-outline-success float-md-left">edit</a>
+                        </td><td>
+                        <a href="/delete/<%=data[i]._id %>" class="btn btn-outline-danger float-md-right">delete</a>
+
+
+                    </td>
+                   
+                
+                    </tr>
+            
+                    <% } %>
+                    </tbody>
+                  </table>
+                </div>
+                  <% } else { %>
+                    no record found
+                <% } %>
+            </div>
+
+
+
+
+
+
+
+    </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <%- include('./header.ejs') %>
+            </div>
+           
+            <div class="col-md-3">
+                <%- include('./left.ejs') %>
+            </div>
+            <div class="col-md-6  border border-1 ">
+                <form class="mt-2" method="post" action="/addproduct" enctype="multipart/form-data">
+                    <div>
+                        <label class="fw-bold text-danger">TITLE</label><br>
+                        <input type="text" name="pname" class="w-100">
+                    </div>
+                    <div>
+                        <label class="fw-bold text-danger">AUTHOR</label><br>
+                        <input type="text" name="pprice" class="w-100">
+                    </div>
+                    <div>
+                        <label class="fw-bold text-danger">CONTENT</label><br>
+                        <input class="w-100" type="text" name="quantity">
+                    </div>
+                   
+                    <br>
+                    <br>
+                    <input type="submit" class="bg-danger text-light rounded-3 p-2 shadow-lg" name="submit">
+                </form>
+                
+          
+        </div>
+    </div>
+</body>
+</html>

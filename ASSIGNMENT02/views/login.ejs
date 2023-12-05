@@ -1,0 +1,28 @@
+<body>
+    <%- include('./header.ejs') %>
+
+
+       <h2>Login Page</h2><br>
+      <table>
+          <form  method="post" action="/login">
+   
+             <label><b>Email </b></label><br>
+             <input type="email" name="email"  placeholder="Email"><br>
+          
+             <label><b class="mb-5">Password
+                </b>
+             </label><br>
+             <input type="password" name="password"  placeholder="Password">
+             <br><br>
+             <button type="submit" name="log" id="log"> LOG IN</button>
+             <br><br>
+             <input type="checkbox" id="check">
+             <span>Remember me</span>
+             <br><br>
+             <a href="#" class=" justify-content-end text-end">Forgot Password?</a>
+          </form>
+        </table>
+     
+
+
+</body>
